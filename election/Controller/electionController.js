@@ -21,9 +21,9 @@ const getContestants = async (req, res) =>{
 const createContestants = async (req, res) =>{
     try {
         
-        const {} = req.body
+        const { name,state,DoB,certificate} = req.body
 
-        const contestantsData = electionModel.create({})
+        const contestantsData = electionModel.create({name,state,DoB,certificate})
 
         res.status(201).json({
             message: "contestants no created",
